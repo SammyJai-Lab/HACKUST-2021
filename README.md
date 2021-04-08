@@ -1,5 +1,5 @@
 ![](Media/Group_1.png)
-<img src="/Media/Group_1.png" height="100px" width="400px" >
+<img src="/Media/Group_1.png" height="100px" width="100px" >
 # HACKUST 2021
 ### **Theme**: Food and Beverage / Catering Technology
 
