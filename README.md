@@ -1,5 +1,5 @@
 # HACKUST 2021
-[](/Media/Group_1.png)
+[](Media/Group_1.png)
 ### **Theme**: Food and Beverage / Catering Technology
 
 >What does the food and beverage industry look like in the next normal? While dine-in is expected to rebound, the habit of eating out of store is here to stay. Whether it is ordering online, picking up from stores or delivery, how do we make every customer experience remain great or even better every single time?
