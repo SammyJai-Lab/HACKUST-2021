@@ -1,6 +1,5 @@
-![](Media/Group_1.png)
-<img src="/Media/Group_1.png" height="100px" width="100px" >
 # HACKUST 2021
+<img src="/Media/Group_1.png" height="100px" width="100px" >
 ### **Theme**: Food and Beverage / Catering Technology
 
 >What does the food and beverage industry look like in the next normal? While dine-in is expected to rebound, the habit of eating out of store is here to stay. Whether it is ordering online, picking up from stores or delivery, how do we make every customer experience remain great or even better every single time?
