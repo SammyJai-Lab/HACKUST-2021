@@ -17,6 +17,6 @@ Example project directions:
 * Contacless payment
 * Online table reservation system
 * Self-serving technologies
-* Real time inventory(Customers) tracking
+* Real time customer tracking
 
 
