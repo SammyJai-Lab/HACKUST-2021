@@ -8,6 +8,9 @@
 >**You are to develop a viable solution to meet customers’ expectation of hygiene or even go beyond that. And to inject agility into a caterer’s operations and leverage data to enable fast response to shifts between dine-in and out-of-store orders.**
 
 Brainstorm direction:
+* Eating in store vs Eating outside store?
+* Ording online, picking up from stores, delivering
+* Customer experience (Hygine by technology)
 * Hardware Solution
 * Software Solution
 * How fast (Long term? Short term?)
