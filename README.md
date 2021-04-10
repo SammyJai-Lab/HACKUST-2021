@@ -1,7 +1,7 @@
 # HACKUST 2021
 <img src="/Media/Group_1.png" height="100px" width="100px" >
 
-### **Theme**: Food and Beverage / Catering Technology
+## **Theme**: Food and Beverage / Catering Technology
 
 ### Background
 
