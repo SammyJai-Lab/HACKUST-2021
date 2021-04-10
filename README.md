@@ -11,17 +11,17 @@
 
 >**You are to develop a viable solution to meet customers’ expectation of hygiene or even go beyond that. And to inject agility into a caterer’s operations and leverage data to enable fast response to shifts between dine-in and out-of-store orders.**
 
-Solutions should:
+### Solutions should:
 * Meet customer expectations of hygiene
 * Insert agility into operations
 * Leverage data to respond quickly to shift to out-of-store(OOS) business
 
-Brainstorm direction:
+### Brainstorm direction:
 * Improving restaurant operations
 * Improve customer experience
 
 ---
-
+Problems 
 Example project directions:
 
 
