@@ -16,16 +16,13 @@ Solutions should:
 * Insert agility into operations
 * Leverage data to respond quickly to shift to out-of-store(OOS) business
 
-
 Brainstorm direction:
 * Improving restaurant operations
 * Improve customer experience
 
+---
+
 Example project directions:
-* Online ordering systems and delivery apps
-* Contacless payment
-* Online table reservation system
-* Self-serving technologies
-* Real time customer tracking
+
 
 
