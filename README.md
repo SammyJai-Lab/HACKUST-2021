@@ -14,15 +14,20 @@
 ### Solutions should:
 * Meet customer expectations of hygiene
 * Insert agility into operations
-* Leverage data to respond quickly to shift to out-of-store(OOS) business
+* Leverage data to respond quickly to shift to out-of-store (OOS) business
 
 ### Brainstorm direction:
 * Improving restaurant operations
 * Improve customer experience
+* Data-driven (Make use of customer data)
+* Digitalise customer journy
+* Streamline out-of-store (OOS) operations
 
 ---
-Problems 
-Example project directions:
+### Example project directions(From PPT):
+* The evolution of delivery
+* IOT Kitchen
+* Alternative data
 
 
 
