@@ -1,5 +1,5 @@
 # HACKUST 2021
-<img src="/Media/Group_1.png" height="100px" width="100px" >
+<img src="/Media/icon.png" height="100px" width="100px" >
 
 ## **Theme**: Food and Beverage / Catering Technology
 
@@ -17,3 +17,4 @@
 ### { Solution Name }
 
 Our solution to the problem is an IoT node made to collect dining data more precisely and aim to help managers gain more information about the operations of the restaurant.
+
