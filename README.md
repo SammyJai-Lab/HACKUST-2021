@@ -21,7 +21,7 @@ Our solution to the problem is an IoT node made by Node MCU made to collect dini
 ### The main module of the node
 <img src="/Media/MainModule.png">
 
-The main module of the node is made using a Node mcu v3, a green led and a button held inside a 3d printed case.
+The main module of the node is made using a NodeMcu V3, a green led and a button held inside a 3d printed case.
 
 ### Sample installation
 <img src="/Media/SampleInstallation.png">
