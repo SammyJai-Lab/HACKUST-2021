@@ -11,23 +11,9 @@
 
 >**You are to develop a viable solution to meet customers’ expectation of hygiene or even go beyond that. And to inject agility into a caterer’s operations and leverage data to enable fast response to shifts between dine-in and out-of-store orders.**
 
-### Solutions should:
-* Meet customer expectations of hygiene
-* Insert agility into operations
-* Leverage data to respond quickly to shift to out-of-store (OOS) business
-
-### Brainstorm direction:
-* Improving restaurant operations
-* Improve customer experience
-* Data-driven (Make use of customer data)
-* Digitalise customer journy
-* Streamline out-of-store (OOS) operations
-
 ---
-### Example project directions(From PPT):
-* The evolution of delivery
-* IOT Kitchen
-* Alternative data
 
+## Our Solution
+### { Solution Name }
 
-
+Our solution to the problem is a IoT node made to collect dining data more percisely and aim to help managers gain more information of the operations of the restaurant.
