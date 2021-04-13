@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Set Data Example</title>
+</head>
+
+<body>
+
+    <div style="line-height: 1.5em">Press the Set button to set the random data to Firebase RTDB.<br />
+        Press the Delete button to delete the previous set data from Firebase RTDB.<br />
+        Don't forget to change projectID and Web API Key in the source of this html file.</div>
+    <div style="margin-top:20px">
+        <button type="button" onclick="setData()" title="Set random number">Set</button>
+        <button type="button" onclick="delData()" title="Delete data">Delete</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+    <script>
+
+        var projectID = "xxxxxxxxxxxx";
+        var apiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+
+        var config = {
+            apiKey: apiKey,
+            authDomain: projectID + ".firebaseapp.com",
+            databaseURL: "https://" + projectID + ".firebaseio.com",
+            storageBucket: projectID + ".appspot.com"
+        };
+
+        firebase.initializeApp(config);
+
+        setData = function () {
+            for (var i = 0; i < 1000; i++)
+                firebase.database().ref('/Test/Stream/' + i).set(i);
+        }
+
+        delData = function () {
+            firebase.database().ref('/Test/Stream').remove();
+        }
+
+    </script>
+</body>
+
+</html>
