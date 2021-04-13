@@ -40,6 +40,9 @@ FirebaseData ledData;
 
 FirebaseJson json;
 
+//TO-DO Button not doing long press and short press right...
+//https://www.instructables.com/Arduino-Dual-Function-Button-Long-PressShort-Press/
+
 void setup() {
 
     Serial.begin(9600);
@@ -47,7 +50,7 @@ void setup() {
     SPI.begin();
     rfid.PCD_Init();
 
-    pinMode(button, INPUT);
+    pinMode(button, INPUT_PULLUP);
     pinMode(ledRed, OUTPUT);
     pinMode(ledGreen, OUTPUT);
 
@@ -155,10 +158,13 @@ void buttonUpdate() {
     else if(buttonLastState == LOW && buttonCurrentState == HIGH) {
         releasedTime = millis();
         long pressDuration = releasedTime - pressedTime;
-        if(pressDuration < PRESS_THRESHOLD)
+        if(pressDuration < PRESS_THRESHOLD) {
+            Serial.println("Short Press Detected");
             shortPress();
-        else
+        } else {
+            Serial.println("Long Press Detected");
             longPress();
+        }
     }
     buttonLastState = buttonCurrentState;
 }
@@ -211,9 +217,6 @@ void rfidSensorUpdate() {
             tag += rfid.uid.uidByte[i];
         }
         Serial.println(tag);
-        tag = "";
-        rfid.PICC_HaltA();
-        rfid.PCD_StopCrypto1();
 
         if (Firebase.getInt(firebaseData, "/FirebaseIOT/serveState")) {
             Serial.println("PASSED");
@@ -258,6 +261,10 @@ void rfidSensorUpdate() {
             Serial.println("------------------------------------");
             Serial.println();
         }
+        
+        tag = "";
+        rfid.PICC_HaltA();
+        rfid.PCD_StopCrypto1();
     }
 }
 
@@ -268,6 +275,7 @@ void stateUpdate() {
 void loop() {
     buttonUpdate();
     ledUpdate();
+    rfidSensorUpdate();
     stateUpdate();
     
 }
