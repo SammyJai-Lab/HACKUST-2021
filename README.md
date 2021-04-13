@@ -16,4 +16,4 @@
 ## Our Solution
 ### { Solution Name }
 
-Our solution to the problem is a IoT node made to collect dining data more percisely and aim to help managers gain more information of the operations of the restaurant.
+Our solution to the problem is an IoT node made to collect dining data more precisely and aim to help managers gain more information about the operations of the restaurant.
