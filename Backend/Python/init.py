@@ -1,4 +1,5 @@
 import pyrebase
+import eel
 
 config = {
     "apiKey": "AIzaSyBdMgthiUTBi17UW4MhV9E7a3dQ8OUFQ3E",
@@ -37,4 +38,23 @@ def reset():
             print(str(deliver.key()) + ":" + str(deliver.val()))
             db.child(root).child("foodDelivery").child(deliver.key()).remove()
 
-def 
+eel.init('web')
+
+@eel.expose
+def getValues():
+    return [    db.child(root).child("serveState").get().val(),
+                db.child(root).child("ResetPending").get().val(),
+                db.child(root).child("ledGreen").get().val(),
+                db.child(root).child("ledRed").get().val()
+            ]
+
+@eel.expose
+def switchLed():
+    if (db.child(root).child("ledGreen").get().val() == "0"):
+        db.child(root).update({"ledGreen": "1"})
+        return
+    if (db.child(root).child("ledGreen").get().val() == "1"):
+        db.child(root).update({"ledGreen": "0"})
+        return
+
+eel.start('index.html')

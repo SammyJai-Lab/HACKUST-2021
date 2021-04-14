@@ -1,0 +1,18 @@
+.data {
+    margin-top: 15px;
+    text-align: center;
+}
+
+pre {
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+ }
+
+#buttonContainer {
+    margin-left: 370px;
+    margin-top: 55px;
+}
+
+button[class="btn btn-dark"] {
+
+}
