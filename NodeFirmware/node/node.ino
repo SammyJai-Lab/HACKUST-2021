@@ -30,8 +30,11 @@ int buttonState = 0; //State of button on the main module. 1 = pressed - 0 = not
 int ledRedState = 0; //State of red led on the main module. 1 = Lights on - 0 = Lights off
 int ledGreenState = 0; //State of green led on the main module. 1 = Lights on - 0 = Lights off
 
-int buttonLastState = LOW;
-int buttonCurrentState;
+boolean buttonActive = false;
+boolean longPressActive = false;
+
+long buttonTimer = 0;
+long longPressTime = 2500;
 
 bool serveState = false;
 
@@ -50,7 +53,7 @@ void setup() {
     SPI.begin();
     rfid.PCD_Init();
 
-    pinMode(button, INPUT_PULLUP);
+    pinMode(button, INPUT);
     pinMode(ledRed, OUTPUT);
     pinMode(ledGreen, OUTPUT);
 
@@ -150,23 +153,27 @@ void longPress() {
 }
 
 void buttonUpdate() {
-    unsigned long pressedTime  = 0;
-    unsigned long releasedTime = 0;
-    buttonCurrentState = digitalRead(button);
-    if(buttonLastState == HIGH && buttonCurrentState == LOW)
-        pressedTime = millis();
-    else if(buttonLastState == LOW && buttonCurrentState == HIGH) {
-        releasedTime = millis();
-        long pressDuration = releasedTime - pressedTime;
-        if(pressDuration < PRESS_THRESHOLD) {
-            Serial.println("Short Press Detected");
-            shortPress();
-        } else {
-            Serial.println("Long Press Detected");
-            longPress();
-        }
-    }
-    buttonLastState = buttonCurrentState;
+    if (digitalRead(button) == HIGH) {
+		if (buttonActive == false) {
+			buttonActive = true;
+			buttonTimer = millis();
+		}
+		if ((millis() - buttonTimer > longPressTime) && (longPressActive == false)) {
+			longPressActive = true;
+		}
+	} else {
+		if (buttonActive == true) {
+			if (longPressActive == true) {
+                longPress();
+                Serial.println("Long Press Detected");
+				longPressActive = false;
+			} else {
+				shortPress();
+                Serial.println("Short Press Detected");
+			}
+			buttonActive = false;
+		}
+	}
 }
 
 
