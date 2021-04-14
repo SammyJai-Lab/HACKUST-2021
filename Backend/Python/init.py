@@ -37,4 +37,4 @@ def reset():
             print(str(deliver.key()) + ":" + str(deliver.val()))
             db.child(root).child("foodDelivery").child(deliver.key()).remove()
 
-reset()
+def 
