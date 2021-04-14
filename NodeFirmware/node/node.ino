@@ -43,8 +43,6 @@ FirebaseData ledData;
 
 FirebaseJson json;
 
-//TO-DO Button not doing long press and short press right...
-//https://www.instructables.com/Arduino-Dual-Function-Button-Long-PressShort-Press/
 
 void setup() {
 
