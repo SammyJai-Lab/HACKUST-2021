@@ -269,15 +269,11 @@ void rfidSensorUpdate() {
     }
 }
 
-void stateUpdate() {
-    int x = 1;
-}
 
 void loop() {
     buttonUpdate();
     ledUpdate();
     rfidSensorUpdate();
     delay(10);
-    stateUpdate();
     
 }
