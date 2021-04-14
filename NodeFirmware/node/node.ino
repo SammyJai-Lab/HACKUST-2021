@@ -279,6 +279,7 @@ void loop() {
     buttonUpdate();
     ledUpdate();
     rfidSensorUpdate();
+    delay(10);
     stateUpdate();
     
 }
