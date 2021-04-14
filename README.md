@@ -39,9 +39,11 @@ Other than the main module, the node also includes an RFID module which can be i
 * MFRC522.h
 
 ### Backend:
-* firebase
+* pyrebase
 ```bash
-pip install requests==1.1.0
-pip install python-firebase
-pip install git+https://github.com/ozgur/python-firebase
+pip install pyrebase
+```
+* eel
+```bash
+pip install eel
 ```
