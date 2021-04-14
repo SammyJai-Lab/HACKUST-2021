@@ -27,3 +27,21 @@ The main module of the node is made using a NodeMcu V3, a green led and a button
 <img src="/Media/SampleInstallation.png">
 
 Other than the main module, the node also includes an RFID module which can be installed at the side of the dining table and connected to the main module by a cable.
+
+<img height = 15> 
+
+# Libraries used
+
+### Node:
+* ESP8266WiFi.h "http://arduino.esp8266.com/stable/package_esp8266com_index.json"
+* FirebaseESP8266.h
+* SPI.h
+* MFRC522.h
+
+### Backend:
+* firebase
+```bash
+pip install requests==1.1.0
+pip install python-firebase
+pip install git+https://github.com/ozgur/python-firebase
+```
