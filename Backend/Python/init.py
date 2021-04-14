@@ -26,15 +26,15 @@ def reset():
     db.child(root).update({"ledRed": "0"})
 
     serveHistory = db.child(root).child("serveHistory").get()
-    if (serveHistory != None):
+    if (type(serveHistory.val()) != type(None)):
         for serve in serveHistory:
             print(str(serve.key()) + ":" + str(serve.val()))
             db.child(root).child("serveHistory").child(serve.key()).remove()
 
-    foodDeliverHistory = db.child(root).child("foodDeliver").get()
-    if (foodDeliverHistory != None):
+    foodDeliverHistory = db.child(root).child("foodDelivery").get()
+    if (type(foodDeliverHistory.val()) != type(None)):
         for deliver in foodDeliverHistory:
             print(str(deliver.key()) + ":" + str(deliver.val()))
-            db.child(root).child("foodDeliver").child(deliver.key()).remove()
+            db.child(root).child("foodDelivery").child(deliver.key()).remove()
 
 reset()
