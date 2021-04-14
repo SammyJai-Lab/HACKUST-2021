@@ -12,7 +12,7 @@
 #define WIFI_SSID "printer"
 #define WIFI_PASSWORD "12345678"
 
-const int PRESS_THRESHOLD = 5000;
+const int PRESS_THRESHOLD = 7000;
 
 constexpr uint8_t RST_PIN = D3;
 constexpr uint8_t SSR_PIN = D4;
@@ -122,22 +122,9 @@ void shortPress() {
 }
 
 void longPress() {
-    //Reset everything
-    if (Firebase.setInt(firebaseData, "/FirebaseIOT/serveState", 0)) {
-        Serial.println("PASSED");
-        Serial.println("PATH: " + firebaseData.dataPath());
-        Serial.println("TYPE: " + firebaseData.dataType());
-        Serial.println("ETag: " + firebaseData.ETag());
-        Serial.println("------------------------------------");
-        Serial.println();
-    } else {
-        Serial.println("FAILED");
-        Serial.println("REASON: " + firebaseData.errorReason());
-        Serial.println("------------------------------------");
-        Serial.println();
-    }
-
-    if (Firebase.setInt(firebaseData, "/FirebaseIOT/buttonCount", 0)) {
+    //When button is pressed for 7 seconds
+    //Send Reset Pending signal to backend
+    if (Firebase.setInt(firebaseData, "/FirebaseIOT/ResetPending", 1)) {
         Serial.println("PASSED");
         Serial.println("PATH: " + firebaseData.dataPath());
         Serial.println("TYPE: " + firebaseData.dataType());
@@ -175,7 +162,6 @@ void buttonUpdate() {
 		}
 	}
 }
-
 
 void ledUpdate() {
     if (Firebase.getString(ledData, "/FirebaseIOT/ledRed")) {
@@ -256,19 +242,29 @@ void rfidSensorUpdate() {
                 Serial.println("------------------------------------");
                 Serial.println();
             }
+            if (Firebase.pushString(firebaseData, "/FirebaseIOT/serveHistory", tag)) {
+                Serial.println("PASSED");
+                Serial.println("------------------------------------");
+                Serial.println();
+            } else {
+                Serial.println("FAILED");
+                Serial.println("REASON: " + firebaseData.errorReason());
+                Serial.println("------------------------------------");
+                Serial.println();
+            }
+        } else {
+            if (Firebase.pushString(firebaseData, "/FirebaseIOT/foodDelivery", tag)) {
+                Serial.println("PASSED");
+                Serial.println("------------------------------------");
+                Serial.println();
+            } else {
+                Serial.println("FAILED");
+                Serial.println("REASON: " + firebaseData.errorReason());
+                Serial.println("------------------------------------");
+                Serial.println();
+            }
         }
 
-        if (Firebase.pushString(firebaseData, "/FirebaseIOT/serveHistory", tag)) {
-            Serial.println("PASSED");
-            Serial.println("------------------------------------");
-            Serial.println();
-        } else {
-            Serial.println("FAILED");
-            Serial.println("REASON: " + firebaseData.errorReason());
-            Serial.println("------------------------------------");
-            Serial.println();
-        }
-        
         tag = "";
         rfid.PICC_HaltA();
         rfid.PCD_StopCrypto1();
