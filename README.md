@@ -32,6 +32,17 @@ Other than the main module, the node also includes an RFID module which can be i
 ### Firebase Example
 <img src="/Media/DBExample.png">
 
+Nodes are connected to a Realtime Database of Firebase. In this example, the document FirebaseIOT contains all the data of one node.
+
+| Key          | Type   | Value      | Description                                                                          |
+|--------------|--------|------------|--------------------------------------------------------------------------------------|
+| ResetPending | Int    | 0 or 1     | Shows whether the node is pending for a reset                                        |
+| buttonState  | Int    | 0 or 1     | Showing whether the button is pressed                                                |
+| foodDelivery | Array  | -          | An array of UID of waiters showing the food delivery history of the particular table |
+| ledGreen     | string | "0" or "1" | Showing the state of the green led on the node                                       |
+| ledRed       | string | "0" or "1" | Showing the state of the red led on the node                                         |
+| serveHistory | Array  | -          | An array of UID of waiters showing the serve history of the particular table         |
+| serveState   | Int    | 0 or 1     | Showing whether the table needs to be served                                         |
 ---
 
 ## Usage
