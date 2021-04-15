@@ -14,12 +14,13 @@
 ---
 
 ## Our Solution
-### { Solution Name }
+### Analytical sprightly
 
 Our solution to the problem is an IoT node made by Node MCU made to collect dining data more precisely and aim to help managers gain more information about the operations of the restaurant.
 
 ### The main module of the node
-<img src="/Media/MainModule.png">
+<img src="/Media/MainModuleV2.png">
+<img src="/Media/MainModuleV2WithNote.jpg">
 
 The main module of the node is made using a NodeMcu V3, a green led and a button held inside a 3d printed case.
 
@@ -27,6 +28,26 @@ The main module of the node is made using a NodeMcu V3, a green led and a button
 <img src="/Media/SampleInstallation.png">
 
 Other than the main module, the node also includes an RFID module which can be installed at the side of the dining table and connected to the main module by a cable.
+
+### Firebase Example
+<img src="/Media/DBExample.png">
+
+Nodes are connected to a Realtime Database of Firebase. In this example, the document FirebaseIOT contains all the data of one node.
+
+| Key          | Type   | Value      | Description                                                                          |
+|--------------|--------|------------|--------------------------------------------------------------------------------------|
+| ResetPending | Int    | 0 or 1     | Shows whether the node is pending for a reset                                        |
+| buttonState  | Int    | 0 or 1     | Showing whether the button is pressed                                                |
+| foodDelivery | Array  | -          | An array of UID of waiters showing the food delivery history of the particular table |
+| ledGreen     | string | "0" or "1" | Showing the state of the green led on the node                                       |
+| ledRed       | string | "0" or "1" | Showing the state of the red led on the node                                         |
+| serveHistory | Array  | -          | An array of UID of waiters showing the serve history of the particular table         |
+| serveState   | Int    | 0 or 1     | Showing whether the table needs to be served                                         |
+---
+
+## Usage
+
+
 
 <img height = 15> 
 
