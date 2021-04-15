@@ -29,6 +29,15 @@ The main module of the node is made using a NodeMcu V3, a green led and a button
 
 Other than the main module, the node also includes an RFID module which can be installed at the side of the dining table and connected to the main module by a cable.
 
+### Firebase Example
+<img src="/Media/DBExample.png">
+
+---
+
+## Usage
+
+
+
 <img height = 15> 
 
 # Libraries used
