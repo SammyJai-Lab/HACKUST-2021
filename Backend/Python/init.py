@@ -17,6 +17,9 @@ root = "FirebaseIOT"
 firebase=pyrebase.initialize_app(config)
 db=firebase.database()
 
+eel.init('web')
+
+@eel.expose
 def reset():
     ButtonCount = db.child(root).child("ButtonCount").get().val()
     print("Button Count: " + str(ButtonCount))
@@ -28,17 +31,17 @@ def reset():
 
     serveHistory = db.child(root).child("serveHistory").get()
     if (type(serveHistory.val()) != type(None)):
+        print("Serve History:")
         for serve in serveHistory:
             print(str(serve.key()) + ":" + str(serve.val()))
             db.child(root).child("serveHistory").child(serve.key()).remove()
 
     foodDeliverHistory = db.child(root).child("foodDelivery").get()
     if (type(foodDeliverHistory.val()) != type(None)):
+        print("Food Deliver History:")
         for deliver in foodDeliverHistory:
             print(str(deliver.key()) + ":" + str(deliver.val()))
             db.child(root).child("foodDelivery").child(deliver.key()).remove()
-
-eel.init('web')
 
 @eel.expose
 def getValues():

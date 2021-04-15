@@ -23,6 +23,10 @@ function buttonLedOnOff(){
     switchLed();
 }
 
+function reset() {
+    eel.reset();
+}
+
 function switchLed() {
     eel.switchLed();
 }
