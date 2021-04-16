@@ -1,5 +1,4 @@
-# HACKUST 2021
-<img src="/Media/icon.png" height="100px" width="100px" >
+# HACKUST 2021 TEAM: Deadline Warrior
 
 ## **Theme**: Food and Beverage / Catering Technology
 
