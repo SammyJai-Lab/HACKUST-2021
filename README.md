@@ -92,4 +92,4 @@ pip install eel
 ---
 ## License & copyright
 
-Licensed under the [GNU AFFERO GENERAL PUBLIC LICENSE](License)
+Licensed under the [GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE)
