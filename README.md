@@ -45,7 +45,16 @@ Nodes are connected to a Realtime Database of Firebase. In this example, the doc
 | serveState   | Int    | 0 or 1     | Showing whether the table needs to be served                                         |
 ---
 
-## Usage
+### Data collected
+By using this node, we can collect a handful of dining data. 
+Which include:
+* History of serving (with timestamp)
+* History of food delivery (with timestamp)
+* Dining time of customers
+* Time needed for serving (Time from the button pressed to waiter register their tag)
+
+### Sample usage
+
 
 
 
