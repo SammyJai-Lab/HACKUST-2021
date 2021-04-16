@@ -63,7 +63,10 @@ Data collected can be used for:
 * Estimating the waiting time
 > By making a more accurate waiting time avaliable to the customers, customers could decide whether they want to dine-in or order a take-away which can potentially make restaurants less crowded and improve hygiene
 * Monitoring the utilization of staffs
-> By collecting data of staffs, 
+> By collecting data of staffs and doing simple analysis, we can get the utilization of staffs and managers can make use of this data to prevent shortage or surplus
+* Enabling fast response to shifts between dine-in and out-of-store orders
+> Knowing the utilization of staffs and customer's dining information, managers can decide how much resources should be allocated to dine-in services and out-of-store services respectively. And this enables a fast response to shifts between dine-in and out-of-store orders
+
 
 
 
