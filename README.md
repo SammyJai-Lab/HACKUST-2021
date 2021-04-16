@@ -29,6 +29,11 @@ The main module of the node is made using a NodeMcu V3, a green led and a button
 
 Other than the main module, the node also includes an RFID module which can be installed at the side of the dining table and connected to the main module by a cable.
 
+### Circuit Diagram
+<img src="/Media/Circuit.png">
+
+This is the circuit diagram of the node.
+
 ### Firebase Example
 <img src="/Media/DBExample.png">
 
@@ -54,7 +59,11 @@ Which include:
 * Time needed for serving (Time from the button pressed to waiter register their tag)
 
 ### Sample usage
-
+Data collected can be used for:
+* Estimating the waiting time
+> By making a more accurate waiting time avaliable to the customers, customers could decide whether they want to dine-in or order a take-away which can potentially make restaurants less crowded and improve hygiene
+* Monitoring the utilization of staffs
+> By collecting data of staffs, 
 
 
 
