@@ -89,3 +89,8 @@ pip install pyrebase
 ```bash
 pip install eel
 ```
+
+---
+## License & copyright
+
+Licensed under the [GNU AFFERO GENERAL PUBLIC LICENSE](License)
