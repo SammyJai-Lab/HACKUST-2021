@@ -103,7 +103,7 @@ void shortPress() {
         Serial.println("------------------------------------");
         Serial.println();
     }
-
+    /*
     if (Firebase.setInt(firebaseData, "/FirebaseIOT/buttonCount", Firebase.getInt(firebaseData, "/FirebaseIOT/buttonCount") + 1)) {
         Serial.println("PASSED");
         Serial.println("PATH: " + firebaseData.dataPath());
@@ -117,6 +117,7 @@ void shortPress() {
         Serial.println("------------------------------------");
         Serial.println();
     }
+    */
 }
 
 void longPress() {
