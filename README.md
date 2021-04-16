@@ -47,6 +47,10 @@ Nodes are connected to a Realtime Database of Firebase. In this example, the doc
 | ledRed       | string | "0" or "1" | Showing the state of the red led on the node                                         |
 | serveHistory | Array  | -          | An array of UID of waiters showing the serve history of the particular table         |
 | serveState   | Int    | 0 or 1     | Showing whether the table needs to be served                                         |
+
+### Sample setup
+<img src="Media/Sample.png">
+
 ---
 
 ### Data collected
