@@ -1,4 +1,4 @@
-# HACKUST 2021 TEAM: Deadline Warrior
+# HACKUST 2021 Project
 
 ## **Theme**: Food and Beverage / Catering Technology
 
